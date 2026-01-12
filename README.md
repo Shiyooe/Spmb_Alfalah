@@ -11,7 +11,7 @@ Website **SPMB (Sistem Penerimaan Murid Baru)** SMK Al-Falah adalah aplikasi ber
 - Login & Logout
 - Pengisian formulir pendaftaran
 - Melihat status pendaftaran
-
+- admin panel
 ### 🧑‍💼 Admin
 - Login Admin
 - Manajemen data pendaftar (CRUD)
