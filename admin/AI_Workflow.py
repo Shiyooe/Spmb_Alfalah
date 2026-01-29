@@ -95,15 +95,13 @@ class QwenWorkflow:
             if not user_input:
                 continue
             
-            # Build prompt dengan history
             if system_prompt:
                 full_prompt = f"System: {system_prompt}\n\nUser: {user_input}\nAssistant:"
             else:
                 full_prompt = f"User: {user_input}\nAssistant:"
-            
-            # Tambahkan history conversation jika ada
+
             if conversation_history:
-                history_text = "\n".join(conversation_history[-4:])  # Ambil 4 pesan terakhir
+                history_text = "\n".join(conversation_history[-4:])  
                 full_prompt = f"{history_text}\n{full_prompt}"
             
             print("AI sedang memproses...")
@@ -117,7 +115,6 @@ class QwenWorkflow:
                 
                 print(f"AI: {response}")
                 
-                # Simpan ke history
                 conversation_history.append(f"User: {user_input}")
                 conversation_history.append(f"Assistant: {response}")
                 
@@ -125,7 +122,6 @@ class QwenWorkflow:
                 print(f"Error: {e}")
                 print("Silakan coba lagi...")
 
-# Contoh workflow khusus
 class SpecializedWorkflows:
     def __init__(self, qwen_workflow: QwenWorkflow):
         self.qwen = qwen_workflow
@@ -204,4 +200,5 @@ def main():
         print("Pilihan tidak valid")
 
 if __name__ == "__main__":
+
     main()
