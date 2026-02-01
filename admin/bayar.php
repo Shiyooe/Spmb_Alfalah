@@ -1,9 +1,7 @@
 <?php
-// Koneksi ke database
 require_once '../config/koneksi3.php';
 
 session_start();
-// Query untuk mengambil data pembayaran dengan JOIN ke tabel pendaftaran
 $query = "SELECT 
             p.id_pendaftaran,
             p.nama,
